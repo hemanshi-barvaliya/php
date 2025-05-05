@@ -1,0 +1,46 @@
+insert into tbl_name(column_name)values('values',...)
+update tbl_name set column_name='value',.... where column_name='value'
+delete from tbl_name where column_name='value'
+
+select * from tbl_name
+select column_name from tbl_name
+select * from tbl_name where column_name=value
+
+select * from tbl_name where column_name=value and column_name=value
+select * from tbl_name where column_name=value or column_name=value
+
+select * from tbl_name order by column_name asc
+select * from tbl_name order by column_name desc
+
+select * from tbl_name where column_name like '%value%'
+select * from tbl_name where column_name like 'value%'
+select * from tbl_name where column_name like '%value'
+
+select * from tbl_name limit start , limit_per_page
+
+select name as user_name from tbl_name 
+
+relational operator
+select * from tbl_name where column_name < value 
+select * from tbl_name where column_name > value 
+select * from tbl_name where column_name <= value 
+select * from tbl_name where column_name >= value 
+select * from tbl_name where column_name = value 
+select * from tbl_name where column_name != value 
+
+array
+select * from tbl_name where id IN (1,2,3,4,5,6,7)
+
+join
+select tbl1.* , tbl2.column_name as new_column_name from tbl1 inner join tbl2 on tbl1.column=tbl2.column
+select tbl1.* , tbl2.column_name from tbl1 left join tbl2 on tbl1.column=tbl2.column
+select tbl1.* , tbl2.column_name from tbl1 right join tbl2 on tbl1.column=tbl2.column
+
+select count( column_name ) as new_column_name from tbl_name
+select MIN( column_name ) as new_column_name from tbl_name
+select MAX( column_name ) as new_column_name from tbl_name
+select AVG( column_name ) as new_column_name from tbl_name
+select sum( column_name ) as new_column_name from tbl_name
+
+select * from tbl_name group by column_name 
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jquey</title>
+</head>
+<body>
+
+
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1 class="box">hello</h1>
+	<h1>hello</h1>
+	<h1 id="a">hello</h1>
+
+
+	<form id="abc">
+
+	<th>
+		<input type="text" name="name">
+		<input type="email" name="email">
+		<input type="submit" name="submit">
+	</th> 
+
+
+
+
+	</form>
+
+	<script src="jquery-3.7.1.min.js"> </script>
+	<script type="text/javascript">
+
+				$(document).ready(function () 
+				{
+					$('.box').html('This is for demo')
+					$('#a').css('color',' pink')
+
+
+					$('#a').click(function () {
+						$(this).html('hello world.........!')
+					})
+
+				})
+
+				$('#abc').submit(function () {
+					var result = $(this).serialize();
+					console.log(result)
+
+					return false;
+				})
+
+
+
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQuery</title>
+</head>
+<body>
+
+	<h1>hello</h1>
+	<h1  class="box">hello</h1>
+	<h1>hello</h1>
+	<h1>hello</h1>
+	<h1 class="box">hello</h1>
+	<h1>hello</h1>
+
+	<form id="frm">
+		<input type="text" name="username">
+		<input type="submit" name="">
+	</form>
+
+
+	<script src="jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript">
+	
+		
+		$(document).ready(function(){       // page load event (page refresh)
+
+
+			$('h1').html('heading tag')
+			// $('.box').html('box heading tag')
+			// $('.box').css('color','red')
+
+			$('h1').click(function(){
+				// alert()
+				$(this).css('color','red')
+			})
+
+			$('#frm').submit(function(){
+				// alert()
+				var data = $(this).serialize();
+				console.log(data)
+
+				return false;
+			})
+
+		})
+
+
+
+
+	</script>
+
+</body>
+</html>
